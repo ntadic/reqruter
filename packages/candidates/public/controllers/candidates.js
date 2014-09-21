@@ -8,6 +8,12 @@ angular.module('mean.candidates').controller('CandidatesController', ['$scope', 
       return $scope.global.isAdmin;
     };
 
+  $scope.openDatepicker = function($event) {
+      $event.preventDefault();
+      $event.stopPropagation();
+
+      $scope.opened = true;
+  };
     $scope.create = function(isValid) {
       if (isValid) {
         var candidate = new Candidates({

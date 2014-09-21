@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('mean.candidates', []);
+angular.module('mean.candidates', ['ui.bootstrap']);

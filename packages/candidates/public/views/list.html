@@ -1,4 +1,23 @@
 <section data-ng-controller="CandidatesController" data-ng-init="find()">
+    <table class="table">
+        <tr>
+            <th mean-token="list-name">Name</th>
+            <th mean-token="list-email">Email</th>
+            <th mean-token="list-phone">Phone</th>
+            <th mean-token="list-dateofbirth">Date of birth</th>
+            <th mean-token="list-yearsofexperience">Years of experience</th>
+            <th mean-token="list-view">View</th>
+        </tr>
+        <tr ng-repeat="candidate in candidates">
+            <td>{{candidate.firstname}} {{candidate.lastname}}</td>
+            <td>{{candidate.email}}</td>
+            <td>{{candidate.phone}}</td>
+            <td>{{candidate.dateofbirth}}</td>
+            <td>{{candidate.yearsofexperience}}</td>
+            <td><a data-ng-href="#!/candidates/{{candidate._id}}">view</a></td>
+        </tr>
+    </table>
+<!--
   <ul class="candidates unstyled">
     <li data-ng-repeat="candidate in candidates">
       <span>{{candidate.created | date:'medium'}}</span> /
@@ -18,4 +37,6 @@
     </li>
   </ul>
   <h1 data-ng-hide="!candidates || candidates.length">No candidates yet. <br> Why don't you <a href="/#!/candidates/create">Create One</a>?</h1>
+
+  -->
 </section>
