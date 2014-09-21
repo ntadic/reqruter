@@ -21,11 +21,16 @@ Candidates.register(function(app, auth, database) {
     'roles': ['authenticated'],
     'title': 'Candidates',
     'link': 'all candidates',
-    'items': {
+    'items': [{
         'roles': ['authenticated'],
-        'title': 'Create New Candidate',
-        'link': 'create candidate'
-    }
+        'title': 'Candidates',
+        'link': 'all candidates'
+        },
+        {
+            'roles': ['authenticated'],
+            'title': 'Create New Candidate',
+            'link': 'create candidate'
+        }]
   });
 
   Candidates.aggregateAsset('css', 'candidates.css');

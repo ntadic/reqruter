@@ -42,8 +42,8 @@ var CandidateSchema = new Schema({
         trim: true
     },
     cv: {
-        type: Buffer,
-        required: true
+        type: Buffer/*,
+        required: true*/
     },
     yearsofexperience: {
         type: Number
