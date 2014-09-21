@@ -1,0 +1,21 @@
+<section data-ng-controller="CandidatesController" data-ng-init="find()">
+  <ul class="candidates unstyled">
+    <li data-ng-repeat="candidate in candidates">
+      <span>{{candidate.created | date:'medium'}}</span> /
+      <span>{{candidate.user.name}}</span>
+      <h2>
+        <a data-ng-href="#!/candidates/{{candidate._id}}">{{candidate.firstname}}</a>
+        <span data-ng-if="hasAuthorization(candidate)">
+          <a class="btn" href="/#!/candidates/{{candidate._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+          </a>
+          <a class="btn" data-ng-click="remove(candidate);">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </span>
+      </h2>
+      <div>{{candidate.note}}</div>
+    </li>
+  </ul>
+  <h1 data-ng-hide="!candidates || candidates.length">No candidates yet. <br> Why don't you <a href="/#!/candidates/create">Create One</a>?</h1>
+</section>
