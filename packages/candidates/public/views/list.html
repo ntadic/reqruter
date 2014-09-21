@@ -12,7 +12,7 @@
             <td>{{candidate.firstname}} {{candidate.lastname}}</td>
             <td>{{candidate.email}}</td>
             <td>{{candidate.phone}}</td>
-            <td>{{candidate.dateofbirth}}</td>
+            <td>{{candidate.dateofbirth | date}}</td>
             <td>{{candidate.yearsofexperience}}</td>
             <td><a data-ng-href="#!/candidates/{{candidate._id}}">view</a></td>
         </tr>
